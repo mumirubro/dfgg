@@ -3,7 +3,7 @@ import os
 import string
 import random
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 ACCESS_CONTROL_FILE = 'access_control.json'
 
@@ -71,7 +71,7 @@ def generate_premium_key(quantity: int, days: int, created_by: str) -> str:
     
     return key_code
 
-def redeem_key(key_code: str, user_id: int, username: str) -> tuple[bool, str]:
+def redeem_key(key_code: str, user_id: int, username: str) -> Tuple[bool, str]:
     """
     Redeem a premium key for a user
     Returns (success: bool, message: str)
